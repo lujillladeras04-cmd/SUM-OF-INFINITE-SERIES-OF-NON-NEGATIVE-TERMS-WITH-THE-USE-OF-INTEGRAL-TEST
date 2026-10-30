@@ -1,0 +1,141 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.4em}
+\linespread{1.15}
+
+\begin{document}
+
+\begin{center}
+    {\small \textbf{ADVANCED CALCULUS --- RESEARCH PAPER \& CRITICAL ANALYSIS}} \\[0.4cm]
+    {\LARGE \textbf{Approximating the Sum of Infinite Series of \\ Non-Negative Terms With Reference to Integral Test: \\ A Formal Analysis}\par}
+    \vspace{0.4cm}
+    {\large Formal Research Summary} \\[0.25cm]
+    \rule{\textwidth}{0.8pt}
+\end{center}
+
+\vspace{0.2cm}
+
+\section{Introduction}
+
+Infinite series constitute one of the most compelling subjects in mathematical analysis and calculus, as they involve evaluating the sum of an infinite sequence of terms. The systematic study of infinite series provides a rigorous framework for representing and approximating functions, as well as resolving analytical problems that finite algebraic methods alone cannot address. A primary objective in the study of infinite series is determining whether a given series converges toward a finite limit or diverges. As observed by Bhayo and Eschner (2025), infinite series play a foundational role across mathematics and the quantitative sciences, making the analysis of their convergence or divergence an indispensable component of mathematical analysis.
+
+One of the principal analytical methods linking discrete infinite series to continuous calculus is the Integral Test. Through this method, the convergence or divergence of a series of positive terms is determined by comparing the series to a corresponding improper integral. Specifically, when the terms of a series are modeled by a continuous, positive, and monotonically decreasing function, the infinite series and its associated improper integral share the same convergence behavior---both either converge simultaneously or diverge simultaneously. Beyond serving as a diagnostic test for convergence, the geometric comparison between the areas of discrete rectangles and the area beneath the curve of a decreasing positive function yields rigorous upper and lower bounds for the sum of the series. Consequently, an improper integral can be employed to approximate the numerical value of a convergent infinite series, even though the value of the improper integral itself is not directly equal to the infinite sum.
+
+These theoretical principles form the foundation of the research article \textit{``Approximating the Sum of Infinite Series of Non-Negative Terms With Reference to Integral Test,''} authored by Daya Ram Paudyal (2020). Paudyal investigates the application of improper integrals both in establishing the convergence of positive-term infinite series and in approximating their exact sums. In particular, the study demonstrates how the Integral Test is applied to a geometric series and how comparing rectangular Riemann areas with the area under a continuous curve produces tight numerical estimates for the infinite sum. Collectively, these concepts illustrate how integral calculus provides an effective analytical mechanism for investigating the structural properties of infinite series and approximating their limiting values.
+
+\section{Summary of the Reviewed Article}
+
+\subsection{Research Objectives}
+
+The primary objective of Paudyal's (2020) study is to examine how the Integral Test and improper integrals can be systematically utilized to determine the convergence of infinite series and to approximate their sums. The author aims to demonstrate that improper integrals serve not merely as a qualitative criterion for establishing whether a positive-term series converges or diverges, but also as a quantitative tool for estimating the limiting value of the sum. A further objective of the article is to establish a formal analytical relationship between a discrete infinite series and its corresponding improper integral, thereby enabling the derivation of explicit upper and lower bounds for the infinite sum.
+
+\subsection{Methodological Framework}
+
+To achieve these objectives, the author applies the Integral Test to infinite series whose general terms can be represented by a positive, continuous, and decreasing function $f(x)$. The areas of the inscribed and circumscribed rectangles corresponding to the discrete terms of the series are compared geometrically with the area beneath the curve $y = f(x)$ in order to construct bounding inequalities. 
+
+This methodology is first demonstrated through its application to the benchmark geometric series:
+\begin{equation}
+    \sum_{n=1}^{\infty} \frac{1}{2^{n-1}} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots
+\end{equation}
+wherein an improper integral is employed to confirm convergence and to approximate the total sum. The author subsequently evaluates and compares the numerical estimates obtained across an increasing number of partial sum terms $n$, and generalizes this approach to derive a closed-form approximation formula for the family of series involving general terms of the form $a^{1-n}$, where $a > 1$.
+
+\subsection{Principal Findings and Results}
+
+The results of the study confirm that the Integral Test effectively establishes the convergence of the geometric series while providing accurate approximations of its sum. In the numerical case examined by the author, both the upper and lower integral estimates converge steadily toward the exact sum of $2$ as the number of explicitly summed terms $n$ increases, accompanied by a monotonic reduction in the approximation error. The author proves that the exact sum of the benchmark geometric series equals $2$ and demonstrates that improper integrals reliably approximate this value despite the integral itself differing from the discrete sum. Furthermore, the article establishes a generalized approximation formula applicable to the class of positive decreasing geometric-type series under consideration. Table~\ref{tab:summary} synthesizes the core analytical components of the reviewed study.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of Analytical Components in Paudyal (2020)}
+\label{tab:summary}
+\vspace{0.2cm}
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Analytical Dimension} & \textbf{Formulation and Role in the Study} \\
+\midrule
+Prerequisite Conditions & The generating function $f(x)$ must be continuous, positive, and monotonically decreasing on the interval $[1, \infty)$. \\
+\addlinespace
+Benchmark Series & Geometric series $\sum_{n=1}^{\infty} 2^{1-n} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots$ with exact limiting sum $S = 2$. \\
+\addlinespace
+Bounding Mechanism & Comparison of discrete rectangular areas (Riemann sums) with the improper integral $\int f(x)\,dx$ to establish upper and lower tail bounds. \\
+\addlinespace
+Generalized Family & Exponential and geometric series of the form $\sum_{n=1}^{\infty} a^{1-n}$ for any base parameter $a > 1$. \\
+\addlinespace
+Error Behavior & The approximation error $E_n$ decreases monotonically as the number of partial terms $n$ increases, satisfying $\lim_{n \to \infty} E_n = 0$. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Critical Analysis}
+
+\subsection{Generalized Closed-Form Approximation Formula}
+
+Paudyal (2020) introduces an explanatory and constructive framework for approximating the sum of convergent infinite series composed of positive, continuously decreasing terms. By applying improper integrals derived from the Integral Test, the author establishes rigorous upper and lower bounds for the remainder (tail end) of an infinite series. Taking the arithmetic mean of these upper and lower integral boundaries, Paudyal derives a generalized closed-form approximation formula for geometric-type series of the form $\sum_{n=1}^{\infty} a^{1-n}$ where $a > 1$, expressed as:
+\begin{equation}
+    \sum_{n=1}^{\infty} a^{1-n} \approx \frac{a^{n}-1}{(a-1)a^{n-1}} + \frac{a+1}{a^{n}\ln(a^{2})}, \quad a > 1.
+    \label{eq:general_approx}
+\end{equation}
+
+\subsection{Error Reduction and Asymptotic Accuracy}
+
+A primary methodological strength of this approach lies in its capacity to substantially reduce approximation error. Averaging the upper and lower Riemann integral bounds yields significantly higher accuracy than relying solely on standard finite partial sums. The author substantiates this improvement by explicitly formulating the error term $E_{n}$ for the series
+\begin{equation}
+    \sum_{k=1}^{\infty} \frac{1}{2^{k-1}}
+\end{equation}
+and proving asymptotically that:
+\begin{equation}
+    \lim_{n \to \infty} E_{n} = 0.
+\end{equation}
+This property offers substantial practical utility when evaluating infinite series that converge slowly or when determining an exact closed-form sum is analytically intractable. Moreover, Paudyal contextualizes these integral approximation techniques within the broader historical evolution of infinite series analysis, connecting modern calculus methodologies to the foundational investigations of Madhava, Pietro Mengoli, the Bernoulli brothers, and Leonhard Euler.
+
+\subsection{Pedagogical Structure and Mathematical Scope}
+
+To ensure analytical clarity, the author organizes the presentation into a logical, step-by-step progression. Geometric diagrams are employed to visually represent rectangular Riemann sums relative to the continuous curve $y = f(x)$, rendering the abstract concepts of upper and lower integral bounds intuitive and accessible. Additionally, a comprehensive numerical table presents step-by-step approximations and error calculations for partial sum indices ranging from $n = 1$ to $n = 10$. Pedagogically, the author facilitates reader comprehension by first analyzing the concrete example
+\begin{equation}
+    f(x) = \frac{1}{2^{x-1}}
+\end{equation}
+having a known exact sum of $S = 2$, prior to introducing the generalized abstract theorem for arbitrary $a > 1$.
+
+From a theoretical standpoint, the methodology is mathematically sound because it rests directly upon the Integral Test, which holds rigorously for all functions that are continuous, positive, and decreasing. By bounding the infinite tail via improper integrals and averaging the resulting extremes, the technique provides a dependable estimation mechanism for any decreasing function whose improper integral can be evaluated in closed form. Nevertheless, a notable limitation of the study is that the specific closed-form approximation presented in Equation~\eqref{eq:general_approx} is valid exclusively for exponential and geometric series satisfying $a > 1$.
+
+\section{Reflection and Connection to Advanced Calculus}
+
+\subsection{Continuous-Discrete Correspondence and Real Analysis Foundations}
+
+This study bridges discrete series summation and continuous real analysis by replacing a discrete sequence of terms $\{a_{n}\}$ with a continuous, positive, decreasing function $f(x)$ such that $f(n) = a_{n}$ for all $x \ge N$. Through this continuous embedding, methods of integral calculus can be applied directly to determine whether an infinite series converges or diverges and to approximate its limiting sum without summing an infinite number of discrete terms individually.
+
+The theoretical validity of this approach rests upon fundamental theorems of Advanced Calculus that define series convergence in terms of the limit of the sequence of partial sums:
+\begin{equation}
+    S = \lim_{n \to \infty} S_{n}, \quad \text{where} \quad S_{n} = \sum_{k=1}^{n} a_{k}.
+\end{equation}
+Specifically, by invoking the \textbf{Monotone Convergence and Boundedness Theorem}, a series of non-negative terms is guaranteed to converge if and only if its monotonically increasing sequence of partial sums $\{S_{n}\}$ is bounded above. This framework relies directly upon core axioms and formal definitions of real analysis, including the \textbf{Least Upper Bound (Supremum) Property} of the real numbers and formal $\epsilon$-$N$ limit arguments, wherein convergence to a limit $L$ requires that for every $\epsilon > 0$, there exists an integer $N$ such that:
+\begin{equation}
+    L - \epsilon < S_{n} < L + \epsilon \quad \text{for all } n \ge N.
+\end{equation}
+
+\subsection{Integral Remainder Bounds and Historical Development}
+
+Furthermore, the reviewed study utilizes Riemann sum partitioning and the geometric area under a curve to bound the remainder of an infinite series. By comparing the cumulative areas of inscribed and circumscribed unit-width rectangles against the continuous area beneath the curve $y = f(x)$, one derives rigorous upper and lower bounds for the infinite tail of the series. Consequently, the exact sum $S$ of the infinite series is constrained within a two-sided inequality determined by the $n$-th partial sum and two improper integrals:
+\begin{equation}
+    \sum_{k=1}^{n} a_{k} + \int_{n+1}^{\infty} f(x)\,dx \le S \le \sum_{k=1}^{n} a_{k} + \int_{n}^{\infty} f(x)\,dx.
+    \label{eq:integral_bounds}
+\end{equation}
+
+Finally, this analytical framework reflects the historical development of mathematical analysis and the seminal contributions of Isaac Newton, Gottfried Wilhelm Leibniz, James Gregory, the Bernoulli brothers, and Leonhard Euler. Their pioneering investigations into infinite processes resolved classical problems in mathematical analysis, including proving the divergence of the harmonic series $\sum_{k=1}^{\infty} \frac{1}{k}$ and establishing Euler's celebrated exact solution to the Basel problem:
+\begin{equation}
+    \sum_{k=1}^{\infty} \frac{1}{k^{2}} = \frac{\pi^{2}}{6}.
+\end{equation}
+
+\section{Conclusion}
+
+In conclusion, the research article by Paudyal (2020) demonstrates how the Integral Test and improper integrals provide a rigorous framework both for determining the convergence or divergence of positive-term infinite series and for approximating their exact sums. Through the illustrative case of a geometric series, the author shows how comparing rectangular Riemann areas with the area beneath a continuous curve yields tight upper and lower bounds. The numerical and analytical findings confirm that as the number of explicitly summed terms $n$ increases, the integral-based approximations converge rapidly toward the true sum while the associated approximation error systematically diminishes toward zero.
+
+Moreover, the study underscores the deep theoretical connection between discrete infinite series and the foundational principles of Advanced Calculus and Real Analysis. Employing improper integrals enables analysts to characterize the asymptotic behavior and limiting sum of a series without evaluating an infinite number of discrete additions. While the closed-form approximation formula derived in the article applies specifically to the class of geometric and exponential series where $a > 1$, the underlying integral bounding methodology remains broadly instructive. Overall, the study effectively illustrates how the Integral Test serves not only as a convergence criterion, but also as a powerful quantitative tool for approximating the sum of convergent infinite series.
+
+\end{document}
